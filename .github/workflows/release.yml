@@ -3,6 +3,7 @@ on:
   push:
 jobs:
   release:
+    permissions: write-all
     strategy:
       matrix:
         os: [ ubuntu-latest ]
