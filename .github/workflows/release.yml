@@ -27,5 +27,5 @@ jobs:
           title: "Build#${{github.run_number}}"
           automatic_release_tag: "${{github.run_number}}"
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          files: build/dist/*.jar
+          files: target/x86_64-unknown-linux-gnu/release/examples
           prerelease: false
