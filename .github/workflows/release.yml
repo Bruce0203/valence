@@ -16,11 +16,12 @@ jobs:
 
       - uses: actions-rs/toolchain@v1
         with:
-          toolchain: stable-x86_64-unknown-linux-musl
+          toolchain: stable-x86_64-unknown-linux-gnu
       - uses: actions-rs/cargo@v1
         with:
+          use-cross: true
           command: build
-          args: --example parkour --release --target x86_64-unknown-linux-musl
+          args: --example parkour --release --target x86_64-unknown-linux-gnu
 
       - name: release
         uses: marvinpinto/action-automatic-releases@latest
