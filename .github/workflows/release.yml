@@ -2,7 +2,7 @@ name: Release
 on:
   push:
 jobs:
-  gradle:
+  release:
     strategy:
       matrix:
         os: [ ubuntu-latest ]
